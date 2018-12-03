@@ -1,7 +1,7 @@
 <template>
     <ul class="nav-list" @click="$store.dispatch('common/sidenavToggle')">
-        <li class="nav-item"><nuxt-link to="/about">Documentation</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/devices">Devices</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/about">Prayer Request</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/devices">Events</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/contact">Contact</nuxt-link></li>
         <li class="nav-item"><nuxt-link :to="loginLink">{{ loginText }}</nuxt-link></li>
         <li class="nav-item" v-if="!isAuth"><nuxt-link to="/register">Register</nuxt-link></li>

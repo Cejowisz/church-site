@@ -6,13 +6,13 @@
 
         <TheSidenav :show="displaySidenav"/>
 
-        <div class="nuxt" :class="[{'center-home': centerHome}, {'add-margin-top': addMarginTop}]">
+        <div class="nuxt" :class="[{'add-margin-top': addMarginTop}]">
             <nuxt/>
         </div>
 
-        <!--<div v-show="$route.path !== '/'">
+        <div>
             <TheFooter/>
-        </div>-->
+        </div>
     </div>
 </template>
 
@@ -39,9 +39,7 @@
         },
 
         methods: {
-            alignHome() {
-                this.$route.path === '/' ? this.centerHome = true : this.centerHome = false
-            },
+
             addMargin() {
 
                 if
@@ -62,7 +60,6 @@
         },
 
         mounted() {
-            this.alignHome();
             this.addMargin()
         }
     }

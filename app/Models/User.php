@@ -51,30 +51,10 @@ class User extends AuthenticatableUser
         'password', 'remember_token',
     ];
 
-    public function device()
-    {
-        return $this->hasMany('App\Models\Device','user_id');
-    }
 
-    public function device_node()
-    {
-        return $this->hasMany('App\Models\DeviceNode','owner_id');
-    }
 
-    public function access()
-    {
-        return $this->hasMany('App\Models\Access');
-    }
 
-    public function event()
-    {
-        return $this->hasMany('App\Models\Event');
-    }
 
-    public function event_log()
-    {
-        return $this->hasMany('App\Models\EventLog');
-    }
 
     public function image()
     {

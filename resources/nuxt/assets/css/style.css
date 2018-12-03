@@ -28,10 +28,7 @@ html, body {
 .nuxt{
     min-height: 100vh;
 }
-.center-home{
-    display: grid;
-    align-items: center;
-}
+
 .add-margin-top{
     margin-top: 60px;
 }

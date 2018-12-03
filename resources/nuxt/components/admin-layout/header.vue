@@ -58,7 +58,6 @@
                     headerEl[0].style.background = '#4d1f56'
                 }
                 else {
-                    alert('hh')
                     headerEl[0].style.background = 'transparent'
                     headerEl[0].style.color = '#4d1f56'
                 }

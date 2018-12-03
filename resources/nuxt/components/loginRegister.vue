@@ -46,7 +46,7 @@
 
 <style>
     body{
-        background: url('../assets/img/meter.jpg');
+        background: url();
         background-size: cover;
     }
     a{

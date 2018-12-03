@@ -1,6 +1,6 @@
 <template>
     <ul class="nav-list" @click="$store.dispatch('common/sidenavToggle')">
-        <li class="nav-item"><nuxt-link to="/admin/access-control">Access Control</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/admin/gallery">Gallery</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/admin/users">Users</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/admin/devices">Devices</nuxt-link></li>
         <li class="nav-item"><nuxt-link :to="loginLink">{{ loginText }}</nuxt-link></li>
