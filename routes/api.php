@@ -4,7 +4,8 @@
 
 //Route::get('users', 'Auth/UsersController@index');
 Route::post('contact', 'ContactController@store');
-Route::resource('devices', 'DeviceController');
+Route::get('galleries', 'GalleryController@index');
+Route::post('galleries', 'GalleryController@store');
 
 
 

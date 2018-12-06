@@ -47,9 +47,18 @@ input:focus{
     border: none;
 }
 
+input{
+    padding: 10px;
+    border-bottom: 1px solid #4d1f56;
+    background: transparent;
+    outline: none;
+}
+input:focus{
+    border-bottom: 1px solid #4d1f56;
+}
+
 button{
     background: #4d1f56;
-    /*background: #3C41A5;*/
     border: none;
     color: #fefefe;
     padding: 15px;
