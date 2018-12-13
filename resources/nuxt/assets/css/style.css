@@ -6,6 +6,12 @@ html, body {
     height: 100%;
     background: #fefefe;
 }
+p, h1, h2, h3, h4, h5, h6{
+    color: #333;
+}
+p{
+    line-height: 1.625em;
+}
 
 .sr-only {
     position: absolute;
@@ -37,7 +43,7 @@ img{
     width: 100%;
 }
 
-input{
+input,textarea{
     padding: 10px;
     border: none;
     background: transparent;
@@ -47,14 +53,15 @@ input:focus{
     border: none;
 }
 
-input{
+input, textarea{
     padding: 10px;
     border-bottom: 1px solid #4d1f56;
     background: transparent;
     outline: none;
 }
-input:focus{
+input:focus, textarea:focus{
     border-bottom: 1px solid #4d1f56;
+    background: transparent;
 }
 
 button{

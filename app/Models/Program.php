@@ -19,11 +19,11 @@ class Program extends Model
 
     public function category()
     {
-        return $this->hasOne('App/Models/Category');
+        return $this->belongsTo('App\Models\Category');
     }
 
     public function image()
     {
-        return $this->hasOne('App/Models/Image');
+        return $this->hasOne('App\Models\Image');
     }
 }

@@ -1,5 +1,6 @@
 <template>
     <form>
+        <small v-if="errors">{{ errors }}</small>
 
         <input type="text" v-model="email" id="email" placeholder="johndoe@example.com" autocomplete="email">
         <label for="email" class="sr-only">email</label>
@@ -27,7 +28,8 @@
                 email: '',
                 password: '',
                 allFields: false,
-                loginTxt: 'Login'
+                loginTxt: 'Login',
+                errors: ''
             }
         },
 
@@ -45,11 +47,14 @@
                         localStorage.setItem('user', JSON.stringify(user))
                         localStorage.setItem('token', token)
 
-                        window.location.href = 'home'
+                        if (user.status === 1) {
+                            window.location.href = '/admin'
+                        }
 
                     }
                     catch (e) {
-                        console.log(e)
+                        this.loginTxt = 'Login'
+                        this.errors = e
                     }
                 } else {
                     this.allFields = true

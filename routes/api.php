@@ -4,8 +4,12 @@
 
 //Route::get('users', 'Auth/UsersController@index');
 Route::post('contact', 'ContactController@store');
-Route::get('galleries', 'GalleryController@index');
-Route::post('galleries', 'GalleryController@store');
+Route::post('prayer-request', 'PrayerRequestController@store');
+
+Route::resource('galleries', 'GalleryController');
+
+Route::get('programs', 'ProgramController@index');
+Route::post('programs', 'ProgramController@store');
 
 
 

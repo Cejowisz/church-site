@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Gallery;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class GalleryController extends Controller
 {
@@ -35,6 +36,16 @@ class GalleryController extends Controller
         if (Gallery::insert($galleries)) {
             return $this->index();
         }
+
+    }
+
+    public function destroy($id)
+    {
+        $gallery = Gallery::find($id);
+        $e = substr($gallery->image_path, 8);
+        Storage::delete($e);
+        $gallery->delete();
+        return response('success');
 
     }
 }

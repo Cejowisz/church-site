@@ -23,47 +23,45 @@
     import TheSideNavToggle from "~/components/guest-layout/TheSideNavToggle"
     import AppLink from '~/components/appLink'
 
-export default {
+    export default {
 
-    name: "TheHeader",
+        components: {
+            TheSideNavToggle,
+            AppLink
+        },
 
-    components: {
-        TheSideNavToggle,
-        AppLink
-    },
+        data() {
+            return {
+                addMargin: false,
+                homeHeader: '',
+                windowHeight: '',
+                addShadow: ''
+            }
+        },
 
-    data() {
-        return {
-            addMargin: false,
-            homeHeader: '',
-            windowHeight: '',
-            addShadow: ''
-        }
-    },
+        methods: {
+            addBackground() {
+                window.innerWidth < 768 ? this.homeHeader = true : this.homeHeader = false
+            }
+        },
 
-    methods: {
-        addBackground() {
-            window.innerWidth < 768 ? this.homeHeader = true : this.homeHeader = false
-        }
-    },
-
-    mounted() {
-        this.addBackground()
+        mounted() {
+            this.addBackground()
 
 
             window.addEventListener('scroll', () => {
                 this.windowHeight = window.scrollY
 
-        })
-    },
+            })
+        },
 
-    watch: {
-        windowHeight(height) {
-            height > 90 ? this.addShadow = true : this.addShadow = false
+        watch: {
+            windowHeight(height) {
+                height > 90 ? this.addShadow = true : this.addShadow = false
+            }
         }
-    }
 
-}
+    }
 </script>
 
 
@@ -80,7 +78,6 @@ export default {
         z-index: 100;
         box-sizing: border-box;
         padding: 0 20px;
-        /*box-shadow: 0 2px 15px -2px rgba(0,0,0,.9);*/
     }
 
     .home-header{

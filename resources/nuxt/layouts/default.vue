@@ -23,8 +23,6 @@
 
     export default {
 
-        middleware: ['check-auth'],
-
         components: {
             TheHeader,
             TheSidenav,
@@ -33,8 +31,7 @@
 
         data() {
             return {
-                addMarginTop: false,
-                centerHome: false
+                addMarginTop: false
             }
         },
 

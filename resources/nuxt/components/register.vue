@@ -86,7 +86,7 @@
                             })
 
                         localStorage.setItem('token', token)
-                        window.location.href = 'home'
+                        window.location.href = '/login'
                     }
 
                     catch (e) {

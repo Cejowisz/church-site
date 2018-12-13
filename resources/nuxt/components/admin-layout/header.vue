@@ -50,7 +50,7 @@
         },
 
         mounted() {
-//            this.navScroll()
+
             let headerEl = document.getElementsByTagName('header')
 
             window.onscroll = function () {

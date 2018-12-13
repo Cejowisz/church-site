@@ -12,6 +12,6 @@ class Category extends Model
 
     public function program()
     {
-        return $this->belongsTo('App\Models\Program', 'category_id');
+        return $this->hasOne('App\Models\Program');
     }
 }

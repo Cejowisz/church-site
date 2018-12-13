@@ -17,10 +17,12 @@ class CreateProgramsTable extends Migration
             $table->increments('id');
             $table->string('title', 100);
             $table->string('description', 100);
-            $table->date('start_date')->nullable();
-            $table->date('end_date')->nullable();
+            $table->dateTime('start_date')->nullable();
+            $table->dateTime('end_date')->nullable();
             $table->unsignedInteger('category_id');
             $table->unsignedInteger('image_id');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('image_id')->references('id')->on('images')->onDelete('cascade');
             $table->timestamps();
         });
     }

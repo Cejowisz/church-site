@@ -1,7 +1,7 @@
 <template>
     <div class="home-container">
 
-        <h1 class="brand">HELIUM</h1>
+        <h1 class="brand">BFA</h1>
 
         <div v-if="login" class="login">
             <Login/>
@@ -46,7 +46,7 @@
 
 <style>
     body{
-        background: url();
+        background: rgba(128, 128, 128, 0.24);
         background-size: cover;
     }
     a{
