@@ -40,7 +40,7 @@
                     if (window.scrollY >= 500 ) {
                         headerEl[0].style.background = '#4d1f56'
                     }
-                    else {
+                    else if(this.$route.path === '/' && window.innerWidth > 767) {
 
                         headerEl[0].style.background = 'transparent'
                         headerEl[0].style.color = '#4d1f56'
@@ -52,12 +52,13 @@
         mounted() {
 
             let headerEl = document.getElementsByTagName('header')
+            let self = this
 
             window.onscroll = function () {
                 if (window.scrollY >= 500 ) {
                     headerEl[0].style.background = '#4d1f56'
                 }
-                else {
+                else if(self.$route.path === '/' && window.innerWidth > 767) {
                     headerEl[0].style.background = 'transparent'
                     headerEl[0].style.color = '#4d1f56'
                 }

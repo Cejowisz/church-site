@@ -2,13 +2,13 @@
     <div class="gallery-container">
 
         <div class="gallery-lists">
-            <button @click.prevent="addGallery = !addGallery">Add Gallery</button>
-            <gallery-list></gallery-list>
+            <button @click.prevent="addEvent = !addEvent">Add Program</button>
+            <event-list></event-list>
         </div>
 
-        <div :class="{'backdrop': addGallery}">
-            <div v-if="addGallery" class="gallery-editor" :class="{'show-modal': addGallery}">
-                <gallery-editor @cancelForm="addGallery = false" :addGallery="addGallery"></gallery-editor>
+        <div :class="{'backdrop': addEvent}">
+            <div v-if="addEvent" class="gallery-editor" :class="{'show-modal': addEvent}">
+                <event-editor @cancelForm="addEvent = false" :addEvent="addEvent"></event-editor>
             </div>
         </div>
     </div>
@@ -16,18 +16,18 @@
 
 <script>
 
-    import GalleryList from '~/components/gallery/list'
-    import GalleryEditor from '~/components/gallery/editor'
+    import EventList from '~/components/events/list'
+    import EventEditor from '~/components/events/editor'
 
     export default {
 
         layout: 'admin',
 
-        components: { GalleryList, GalleryEditor },
+        components: { EventList, EventEditor },
 
         data() {
             return {
-                addGallery: false
+                addEvent: false
             }
         }
 

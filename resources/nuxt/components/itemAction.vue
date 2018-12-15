@@ -6,18 +6,18 @@
 
             <div>
                 <span v-if="selectedItem.id == item.id" class="selected-item-action">
-                    <a
-                            href="#"
+                   <!-- <a
+                            href="#" class="action-link"
                             @click.prevent="$router.push(`${route}/${item.id}`)">
                             <i class="fa fa-eye"></i>
-                    </a>
+                    </a>-->
                     <a
-                            href="#"
+                            href="#" class="action-link"
                             @click.prevent="$router.push(`${route}/${item.id}/edit`)">
                             <i class="fa fa-pencil"></i>
                     </a>
                     <a
-                            href="#"
+                            href="#" class="action-link"
                             @click.prevent="$router.push({
                                 path: `${route}/${item.id}/delete`,
                                 params: item.id,
@@ -82,17 +82,23 @@
         transition: 1s ease;
         color: #4d1f56;
         position: absolute;
-        top: 50%;
-        right: 0;
+        top: -15px;
+        right: 50px;
 
     }
     .fa-times-circle{
         position: absolute;
-        top: 50%;
-        right: -15px;
+        top: 25px;
+        right: -25px;
         transform: translate(-50%, -50%);
     }
-
+    .selected-item{
+        position: relative;
+    }
+    .selected-item-action{
+        position: absolute;
+        right: 100px;
+    }
     .selected-item-action i{
         margin: 0 5px;
         font-size: 1.2rem;
@@ -106,5 +112,24 @@
     }
     .fa-trash{
         color: indianred;
+    }
+    @media(max-width: 767px) {
+        .ellipsis{
+            right: 20px;
+        }
+        .selected-item-action{
+            right: 5px;
+            top: -50px;
+        }
+        .fa-times-circle{
+            position: absolute;
+            top: 40px;
+            right: -25px;
+            transform: translate(-50%, -50%);
+        }
+        .action-link{
+            margin-bottom: 9px;
+        }
+
     }
 </style>

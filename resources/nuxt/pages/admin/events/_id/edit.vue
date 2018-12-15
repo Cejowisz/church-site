@@ -8,7 +8,7 @@
 
 <script>
 
-    import Editor from '~/components/gallery/editor'
+    import Editor from '~/components/events/editor'
 
     export default {
 

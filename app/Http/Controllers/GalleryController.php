@@ -11,8 +11,13 @@ class GalleryController extends Controller
 
     public function index()
     {
-        $galleries = Gallery::all();
+        $galleries = Gallery::orderBy('created_at', 'desc')->get();
         return $galleries;
+    }
+
+    public function show($id)
+    {
+        return(Gallery::findOrFail($id));
     }
 
     public function store(Request $request)
@@ -39,13 +44,26 @@ class GalleryController extends Controller
 
     }
 
+    public function update(Request $request, $id)
+    {
+
+        $gallery = Gallery::findOrFail($id);
+
+        $gallery->title = $request->title;
+        $gallery->description = $request->description;
+//        $gallery->image_path = 'storage/' . $gallery->images->store('galleries', 'public');
+
+        $gallery->save();
+        return $this->index();
+    }
+
     public function destroy($id)
     {
         $gallery = Gallery::find($id);
-        $e = substr($gallery->image_path, 8);
+        $e = substr($gallery->image_path, 9);
         Storage::delete($e);
         $gallery->delete();
-        return response('success');
+        return $this->index();
 
     }
 }

@@ -1,6 +1,5 @@
 <template>
     <div class="gallery-list">
-        <p>Galleries</p>
         <div class="gallery-item" v-for="gallery in galleries">
             <div>
                 <span class="title">{{ gallery.title }}</span>
@@ -13,7 +12,6 @@
                         :route="route"
                         :deleteApi="deleteApi"
                         :selectedItemStore="selectedItemStore"
-                        :dispatchAction="dispatchAction"
                         :redirectUser="route"
                         :selectedItem="selectedItem"/>
             </div>
@@ -33,8 +31,7 @@
             return {
                 route: '/admin/gallery',
                 deleteApi: '/api/galleries',
-                selectedItemStore: 'galleries/selectedItem',
-                dispatchAction: 'user/deviceNodes'
+                selectedItemStore: 'galleries/selectedItem'
             }
         },
 
@@ -57,18 +54,22 @@
 
 <style scoped>
     .gallery-list{
-        /*margin: 20px auto;
-        width: 60%;*/
+        background: #f9f9f9;
     }
     .gallery-item{
         color: #333;
-        width: 50%;
         margin: 10px 20px;
         display: grid;
         grid-gap: 15px;
-        grid-template-columns: 1fr 1fr 100px;
+        grid-template-columns: 1fr 1fr 200px;
         align-items: center;
+        border-bottom: 1px solid #ccc;
+        padding: 20px 10px;
     }
+    .gallery-item:last-child{
+        border-bottom: none;
+    }
+
     .title{
         margin: 0;
         font-weight: 700;
@@ -83,10 +84,11 @@
     }
     @media(max-width: 767px) {
         .gallery-item{
-
-            grid-gap: 15px;
-            grid-template-columns: 70% 20% 100px;
-
+            grid-template-columns: 1fr 1fr 10px;
+            margin: 10px 0;
+        }
+        .gallery-item img{
+            width: 100px;
         }
     }
 </style>

@@ -23,6 +23,7 @@ export default {
 
         navScroll() {
 
+            // Home Page scroll behavior.
             if (this.$route.path === '/' && window.innerWidth > 767) {
 
                 let a = document.querySelectorAll('.nav-item a')
@@ -45,7 +46,7 @@ export default {
                 let headerEl = document.getElementsByTagName('header')[0]
                 let a = document.querySelectorAll('.nav-item a')
 
-                if (self.$route.path === '/' && window.scrollY <= 250) {
+                if (self.$route.path === '/' && window.scrollY <= 250 && window.innerWidth > 767) {
                     headerEl.style.background = 'transparent'
                     headerEl.style.transition = '2s ease'
                     brandName.style.color = '#fee0ea'
@@ -84,6 +85,7 @@ export default {
 
         this.dynamicNav()
         this.navScroll()
+        this.isLoggedIn()
 
         let brandName = document.querySelectorAll('.logo a')[0]
         let headerEl = document.getElementsByTagName('header')[0]
@@ -111,7 +113,7 @@ export default {
                 let headerEl = document.getElementsByTagName('header')[0]
                 let a = document.querySelectorAll('.nav-item a')
 
-                if (e.path === '/' && window.scrollY <= 500) {
+                if (e.path === '/' && window.scrollY <= 500 && window.innerWidth > 767) {
                     headerEl.style.background = 'transparent'
                     headerEl.style.transition = '2s ease'
                     brandName.style.color = '#fee0ea'
