@@ -1,9 +1,7 @@
 <template>
-    <div class="gallery-container">
-        <div v-for="gallery in galleries" class="gallery-item">
-            <img :src="`/${gallery.image_path}`" alt="bfa image">
-            <h4>{{ gallery.title }}</h4>
-            <p>{{ gallery.description }}</p>
+    <div class="gallerries-container">
+        <div v-if="galleries">
+            <lightbox :images="galleries" :caption="true"></lightbox>
         </div>
     </div>
 </template>
@@ -14,7 +12,15 @@
 
         computed: {
             galleries() {
-                return this.$store.getters['galleries/allGalleries']
+                let arr = []
+
+                if (this.$store.getters['galleries/allGalleries']) {
+                    this.$store.getters['galleries/allGalleries'].forEach( item => {
+                        arr.push({src: item.image_path, caption: item.title})
+                    })
+                }
+
+                return arr
             }
         },
 
@@ -26,23 +32,11 @@
 
 </script>
 
-<style scoped>
-    .gallery-container{
-        display: grid;
-        grid-gap: 30px;
-        width: 80%;
-        margin: 50px auto;
-        background: #fefefe;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        grid-template-rows: 300px;
+<style>
+    .gallerries-container{
+        margin-top: 50px;
     }
-    .gallery-item{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 200px 20px 20px;
-
-    }
-    img{
-        /*width: auto;*/
+    .holder{
+        margin-top: 100px !important;
     }
 </style>

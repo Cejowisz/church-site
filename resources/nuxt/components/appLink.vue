@@ -1,5 +1,6 @@
 <template>
     <ul class="nav-list" @click="$store.dispatch('common/sidenavToggle')">
+        <li class="nav-item"><nuxt-link to="/">Home</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/events">Events</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/gallery">Gallery</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/prayer-request">Prayer Request</nuxt-link></li>
@@ -16,6 +17,18 @@
     export default {
 
         mixins: [AppLinks],
+
+        data() {
+            return {
+                addHomeLink: false
+            }
+        },
+
+        mounted() {
+            if (window.innerWidth < 768) {
+                this.addHomeLink = true
+            }
+        }
 
     }
 

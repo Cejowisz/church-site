@@ -1,6 +1,6 @@
 <template>
 
-    <div class="prayer-container">
+    <div class="prayer-container animated fadeInUp">
 
         <prayer-form :apiRoute="apiRoute">
             <h3 class="underline" slot="contact-heading">Prayer request</h3>

@@ -9,7 +9,7 @@
         <TheSideNavToggle @toggle="$store.dispatch('common/sidenavToggle')" />
 
         <div class="logo">
-            <nuxt-link to="/">HELIUM</nuxt-link>
+            <nuxt-link to="/">MORNING BEAUTY</nuxt-link>
         </div>
         <div class="spacer"></div>
         <div class="navigation-items">

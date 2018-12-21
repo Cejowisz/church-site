@@ -64,7 +64,7 @@
     @import "../assets/css/style.css";
     input{
         border-bottom: 2px solid #3c0606;
-        color: #333;
+        color: #fefefe;
         font-size: 1rem;
         transition: 2s ease-in-out;
     }
@@ -82,19 +82,19 @@
         -webkit-text-fill-color: #333 !important;
     }
     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-        color: #333;
+        color: #fefefe;
         transition: 2s ease-in-out;
     }
     ::-moz-placeholder { /* Firefox 19+ */
-        color: #333;
+        color: #fefefe;
         transition: 2s ease-in-out;
     }
     :-ms-input-placeholder { /* IE 10+ */
-        color: #333;
+        color: #fefefe;
         transition: 2s ease-in-out;
     }
     :-moz-placeholder { /* Firefox 18- */
-        color: #333;
+        color: #fefefe;
         transition: 2s ease-out;
     }
 

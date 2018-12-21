@@ -12,6 +12,7 @@ module.exports = laravelNuxt({
     },
     css: [
         '~/assets/font-awesome/css/font-awesome.min.css',
+        '~/assets/css/animate.min.css'
     ],
     build:{
     	extractCSS: true
@@ -20,6 +21,8 @@ module.exports = laravelNuxt({
 
     plugins: [
         { src: '~/plugins/axios' },
+        { src: '~plugins/gallery.js', ssr: false },
+        { src: '~plugins/datetime.js', ssr: false },
         { src: '~/plugins/capitalize', ssr: false },
         {src:'~/plugins/map', ssr: false},
     ],

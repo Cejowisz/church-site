@@ -5,16 +5,14 @@
                 <source src="../assets/video/test.mp4" type="video/mp4">
             </video>
             <div class="hero-intro">
-                <h1>This is the hero</h1>
-                <p>Ever since we started creating courses on Scrimba, <br>
-                    people have asked us for a proper intro course on React.
-                </p>
+                <h1>Sweet Movement</h1>
+                <p>The royal diadem thorough breds.</p>
             </div>
             <div class="hero-back"></div>
         </div>
 
         <div class="feat">
-            <div class="feat-inner card">
+            <div class="feat-inner card animated fadeInUp">
                 <img src="../assets/img/f2.jpg" alt="Beauty for ashes image">
                 <h1>Worship</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -22,7 +20,7 @@
                     omnis optio quae quam recusandae rem, repellat, similique veritatis voluptatum. Ipsum.
                 </p>
             </div>
-            <div class="feat-inner card">
+            <div class="feat-inner card animated fadeInUp">
                 <img src="../assets/img/f2.jpg" alt="Beauty for ashes image">
                 <h1>Connect</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -30,7 +28,7 @@
                     omnis optio quae quam recusandae rem, repellat, similique veritatis voluptatum. Ipsum.
                 </p>
             </div>
-            <div class="feat-inner card">
+            <div class="feat-inner card animated fadeInUp">
                 <img src="../assets/img/f3.jpg" alt="Beauty for ashes image">
                 <h1>Collaborate</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -41,7 +39,7 @@
         </div>
 
         <div class="activities">
-            <div class="special">
+            <div class="special animated fadeInUp">
                 <img class="activities-img" src="../assets/img/special.jpg" alt="baifc image">
                 <div class="activities-inner">
                     <h1>Special Program</h1>
@@ -54,7 +52,7 @@
                 </div>
             </div>
 
-            <div class="workshop reverse">
+            <div class="workshop reverse animated fadeInUp">
                 <img class="activities-img" src="../assets/img/special.jpg" alt="baifc image">
                 <div class="activities-inner">
                     <h1>Workshop Program</h1>
@@ -67,7 +65,7 @@
                 </div>
             </div>
 
-            <div class="children">
+            <div class="children animated fadeInUp">
                 <img class="activities-img" src="../assets/img/special.jpg" alt="baifc image">
                 <div class="activities-inner">
                     <h1>Children Program</h1>
@@ -144,6 +142,7 @@
     .activities-inner{
         width: 300px;
         justify-self: center;
+        margin-bottom: 20px;
     }
     .activities-inner p{
         margin-bottom: 50px;
@@ -161,8 +160,8 @@
         display: grid;
         grid-gap: 30px;
         grid-row-gap: 30px;
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-        padding: 24px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        /*padding: 24px;*/
     }
 
     .hero-back{
@@ -191,7 +190,7 @@
 
     @media(min-width: 768px) {
         .activities-img{
-            width: 350px;
+            width: 300px;
         }
         .special, .workshop, .children{
             min-height: 400px;
@@ -212,7 +211,14 @@
             top: 0;
             margin-top: 60px !important;
         }
+        .feat{
+            margin: 60px 0;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-auto-rows: auto;
 
+        }
     }
 </style>
 

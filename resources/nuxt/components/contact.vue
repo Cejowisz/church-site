@@ -128,10 +128,8 @@
 
 <style scoped>
     .contact-container{
-        /*min-height: 100vh;*/
         display: grid;
         grid-template-columns: 50% 50%;
-        /*background: #1A2462;*/
         color: #333;
         padding: 100px;
     }
@@ -153,7 +151,7 @@
         margin-top: 35px;
     }
     p{
-        color: #ccc;
+        color: #333;
     }
     button{
         border-radius: 3%;

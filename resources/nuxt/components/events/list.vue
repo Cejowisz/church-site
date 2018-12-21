@@ -5,7 +5,7 @@
                 <span class="title">{{ event.title }}</span>
                 <span class="desc">{{ event.description }}</span>
             </div>
-            <img :src="`/${event.image_path}`" alt="bfa image">
+            <img :src="`/${event.image.file_path}`" alt="bfa image">
             <div>
                 <ItemAction
                         :item="event"

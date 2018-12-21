@@ -24,6 +24,6 @@ class Program extends Model
 
     public function image()
     {
-        return $this->hasOne('App\Models\Image');
+        return $this->belongsTo('App\Models\Image');
     }
 }

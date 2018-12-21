@@ -5,11 +5,10 @@
 //Route::get('users', 'Auth/UsersController@index');
 Route::post('contact', 'ContactController@store');
 Route::post('prayer-request', 'PrayerRequestController@store');
+Route::get('categories', 'CategoryController@index');
 
 Route::resource('galleries', 'GalleryController');
-
-Route::get('programs', 'ProgramController@index');
-Route::post('programs', 'ProgramController@store');
+Route::resource('programs', 'ProgramController');
 
 
 
